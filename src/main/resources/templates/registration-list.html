@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+
+<!-- Mirrored from webapplayers.com/inspinia_admin-v2.0/empty_page.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2015 10:53:24 GMT -->
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Bashirat | SMS</title>
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="template-js/index.js"> </script>
+    <script src="js/bootbox.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="template-js/admin-add-registration-details.js"> </script>
+    <script src="template-js/registration.js"> </script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="../template-css/home.css" rel="stylesheet"/>
+    <script src="js/jquery-2.1.1.js"></script>
+
+
+</head>
+
+<body onclick="redirectToPage()">
+<script type='text/javascript'>
+    var csrfParameter = '${_csrf.parameterName}';
+    var csrfToken = '${_csrf.token}';
+</script>
+<div class="loading-modal"><!-- Place at bottom of page --></div>
+<div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="nav-header" style="padding: 0px">
+                    <div class="profile-element"> <span>
+                            <img alt="image" class="img" src="img/vector_education_Shield.png" width="150px" />
+                             </span>
+                    </div>
+                    <div class="logo-element">
+                        <span>
+                            <img alt="image" class="img" src="img/smalllogo.png" />
+                             </span>
+                    </div>
+                </li>
+                <!-- <li>
+                    <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> </a>
+                </li> -->
+
+                <li>
+                    <a href="/"><i class="fa fa-edit"></i><span class="nav-label">Registration Upload</span></a>
+                </li>
+                <li>
+                    <a href="/upload-result"><i class="fa fa-edit"></i><span class="nav-label">Result Upload</span></a>
+                </li>
+                <li>
+                    <a href="/studentlist"><i class="fa fa-edit"></i><span class="nav-label">View Students</span></a>
+                </li>
+                <li>
+                    <a href="/registrationlist"><i class="fa fa-edit"></i><span class="nav-label">View Registration details</span></a>
+                </li>
+                <li>
+                    <a href="/view-results"><i class="fa fa-edit"></i><span class="nav-label">View Uploaded Results</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top  " role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <span class="m-r-sm text-muted welcome-message">Welcome to brilliant stars college.</span>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-messages">
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a7.jpg" />
+                                    </a>
+                                    <div class="media-body">
+                                        <small class="pull-right">46h ago</small>
+                                        <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br/>
+                                        <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a4.jpg" />
+                                    </a>
+                                    <div class="media-body ">
+                                        <small class="pull-right text-navy">5h ago</small>
+                                        <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br/>
+                                        <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/profile.jpg" />
+                                    </a>
+                                    <div class="media-body ">
+                                        <small class="pull-right">23h ago</small>
+                                        <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br/>
+                                        <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="mailbox.html">
+                                        <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="mailbox.html">
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="profile.html">
+                                    <div>
+                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                        <span class="pull-right text-muted small">12 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="grid_options.html">
+                                    <div>
+                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="notifications.html">
+                                        <strong>See All Alerts</strong>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <button onclick="logoutUser()">
+                            <i class="fa fa-sign-out"></i> Log out
+                        </button>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div hidden="hidden" id="currentPage" th:text="${pageNo}"></div>
+            <div hidden="hidden" id="totalPageNo" th:text="${totalPageNo}"></div>
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h3>Uploaded registration details</h3>
+                    </div>
+                </div>
+            </div>
+            <div id="dashboard-content" style="margin-left: 10px;margin-top: 20px">
+
+                <div th:if="${totalElements > 0}">
+                    <h4 th:text="${totalElements} + ' student(s) found' "></h4>
+                </div>
+
+                <table class="table table-striped" >
+
+                    <tr th:if="${registrationList == null OR registrationList.size() == 0}">
+                        <td>No uploaded record found</td>
+                    </tr>
+
+                    <thead>
+                    <tr th:if="${registrationList != null AND registrationList.size()>0}">
+                        <td>Registration Number</td>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                        <td>Date Uploaded</td>
+                        <td>Class</td>
+                    </tr>
+                    </thead>
+
+                    <tbody th:if="${registrationList != null AND registrationList.size()>0}">
+                    <tr th:each="regdetails:${registrationList}">
+                        <td th:text="${regdetails.registrationNo}"></td>
+                        <td th:text="${regdetails.firstName}"></td>
+                        <td th:text="${regdetails.lastName}"></td>
+                        <td th:text="${regdetails.uploadedDate}" ></td>
+                        <td th:text="${regdetails.aClass}" ></td>
+                    </tr>
+
+                    </tbody>
+                    <tfoot>
+                    <div class="col-md-4 col-md-offset-4" style="font-size: 15px;">
+                        <a href="javascript: previousPage()">Prev</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript: nextPage()">Next</a>
+                    </div>
+                    </tfoot>
+
+                </table>
+
+            </div>
+        </div>
+
+
+
+        <div class="footer">
+            <div>
+                <strong>Copyright</strong> SMS &copy; 2018
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<script src="template-js/admin-add-registration-details.js"> </script>
+<script src="template-js/download.js"> </script>
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+<script>
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from webapplayers.com/inspinia_admin-v2.0/empty_page.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2015 10:53:24 GMT -->
+</html>

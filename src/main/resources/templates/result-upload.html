@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+
+<!-- Mirrored from webapplayers.com/inspinia_admin-v2.0/empty_page.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2015 10:53:24 GMT -->
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Bashirat | SMS</title>
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="template-js/index.js"> </script>
+    <script src="js/bootbox.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="template-js/result-upload.js"> </script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="../template-css/home.css" rel="stylesheet"/>
+    <script src="js/jquery-2.1.1.js"></script>
+
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        var access_token = /*[[${token}]]*/+'';
+        localStorage.setItem("access_token", access_token);
+
+        /*]]>*/
+    </script>
+
+</head>
+
+<body onclick="redirectToPage()">
+<script type='text/javascript'>
+    var csrfParameter = '${_csrf.parameterName}';
+    var csrfToken = '${_csrf.token}';
+</script>
+<div class="loading-modal"><!-- Place at bottom of page --></div>
+<div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="nav-header" style="padding: 0px">
+                    <div class="profile-element"> <span>
+                            <img alt="image" class="img" src="img/vector_education_Shield.png" width="150px" />
+                             </span>
+                    </div>
+                    <div class="logo-element">
+                        <span>
+                            <img alt="image" class="img" src="img/smalllogo.png" />
+                             </span>
+                    </div>
+                </li>
+                <!-- <li>
+                    <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> </a>
+                </li> -->
+
+                <li>
+                    <a href="/"><i class="fa fa-edit"></i><span class="nav-label">Registration Upload</span></a>
+                </li>
+                <li>
+                    <a href="/upload-result"><i class="fa fa-edit"></i><span class="nav-label">Result Upload</span></a>
+                </li>
+                <li>
+                    <a href="/studentlist"><i class="fa fa-edit"></i><span class="nav-label">View Students</span></a>
+                </li>
+                <li>
+                    <a href="/registrationlist"><i class="fa fa-edit"></i><span class="nav-label">View Registration details</span></a>
+                </li>
+                <li>
+                    <a href="/view-results"><i class="fa fa-edit"></i><span class="nav-label">View Uploaded Results</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top  " role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <span class="m-r-sm text-muted welcome-message">Welcome to brilliant stars college.</span>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-messages">
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a7.jpg" />
+                                    </a>
+                                    <div class="media-body">
+                                        <small class="pull-right">46h ago</small>
+                                        <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br/>
+                                        <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a4.jpg" />
+                                    </a>
+                                    <div class="media-body ">
+                                        <small class="pull-right text-navy">5h ago</small>
+                                        <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br/>
+                                        <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/profile.jpg" />
+                                    </a>
+                                    <div class="media-body ">
+                                        <small class="pull-right">23h ago</small>
+                                        <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br/>
+                                        <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="mailbox.html">
+                                        <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="mailbox.html">
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="profile.html">
+                                    <div>
+                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                        <span class="pull-right text-muted small">12 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="grid_options.html">
+                                    <div>
+                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="notifications.html">
+                                        <strong>See All Alerts</strong>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <button onclick="logoutUser()">
+                            <i class="fa fa-sign-out"></i> Log out
+                        </button>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h3>Students result upload page</h3>
+                    </div>
+                </div>
+            </div>
+            <div id="dashboard-content" style="margin-left: 10px;margin-top: 20px">
+
+                <!--<div class="main-agileinfo">-->
+                <!--<div class="agileits-top">-->
+                <!--<form method="post" action="javascript : triggerUpload()" enctype="multipart/form-data" >-->
+                <!--<input type="file" name="file" /><br/><br/>-->
+                <!--<input type="button" value="Upload" id="uploadForm" onclick="uploadRegistarationData(this.form)" />-->
+                <!--</form>-->
+                <!--</div>-->
+                <!--</div>-->
+
+                <div class="file-upload">
+                    <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add File</button>
+
+                    <form method="post" action="javascript : triggerUpload()" enctype="multipart/form-data" >
+
+                        <select name="sClass" id="sClass" class="form-control" style="width: 94.5% !important; margin-top: 20px; margin-bottom: 20px" required="required">
+                            <option value="JSS1">Junior secondary school 1</option>
+                            <option value="JSS2">Junior secondary school 2</option>
+                            <option value="JSS3">Junior secondary school 3</option>
+                            <option value="SS1_ART">Senior secondary school 1 Art</option>
+                            <option value="SS1_COMM">Senior secondary school 1 Commercial</option>
+                            <option value="SS1_SCI">Senior secondary school 1 Science</option>
+                            <option value="SS2_ART">Senior secondary school 2 Art</option>
+                            <option value="SS2_COMM">Senior secondary school 2 Commercial</option>
+                            <option value="SS2_SCI">Senior secondary school 2 Science</option>
+                            <option value="SS3_ART">Senior secondary school 3 Art</option>
+                            <option value="SS3_COMM">Senior secondary school 3 Commercial</option>
+                            <option value="SS3_SCI">Senior secondary school 3 Science</option>
+                        </select>
+
+                        <input class="form-control" required="required" type="text" name="subjectCode" id="subjectCode" placeholder="Subject code" />
+
+                        <div class="image-upload-wrap">
+                            <input class="file-upload-input" type='file' onchange="readURL(this);" name="file" accept="excel/*" />
+                            <div class="drag-text">
+                                <h3>Drag and drop a file or select a file</h3>
+                            </div>
+                        </div>
+                        <div class="file-upload-content">
+                            <span class="file-upload-image"> File Uploaded</span>
+                            <!--<img class="file-upload-image" src="#" alt="Uploaded file" />-->
+                            <div class="image-title-wrap">
+                                <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+                            </div>
+                        </div>
+                        <input style="margin-top: 20px" type="button" class="file-upload-btn" value="Upload Registration Details" id="uploadForm" onclick="uploadResultData(this.form)" required="required"/>
+                    </form>
+                </div>
+
+                <button class="btn btn-md md-12 btn-danger" onclick="showErrorMessage()">View error message</button>
+
+            </div>
+        </div>
+
+
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Failed Records</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="errorMessageContent">
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <div>
+                <strong>Copyright</strong> SMS &copy; 2018
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<script src="template-js/admin-add-registration-details.js"> </script>
+<script src="template-js/download.js"> </script>
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+<script>
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from webapplayers.com/inspinia_admin-v2.0/empty_page.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Apr 2015 10:53:24 GMT -->
+</html>

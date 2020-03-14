@@ -1,0 +1,81 @@
+<!--
+Author: Colorlib
+Author URL: https://colorlib.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Creative Colorlib SignUp Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Custom Theme files -->
+    <link href="css/signup-style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- //Custom Theme files -->
+    <!-- web font -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet" />
+    <script src="template-js/signup.js"></script>
+    <script src="js/jquery-2.1.1.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootbox.min.js"></script>
+
+    <!-- //web font -->
+</head>
+<body>
+<!-- main -->
+<div class="main-w3layouts wrapper">
+    <h2 style="color: #FFFFFF; text-align: center">SignUp with your registration number</h2>
+    <div class="main-agileinfo">
+        <div class="agileits-top">
+            <div id="matchErrorMsg" style="color: red; margin-bottom: 20px; font-size: 20px"></div>
+            <form method="post" action="javascript : triggerSignup()" enctype="multipart/form-data" >
+                <input class="text" type="text" name="regNo" placeholder="Registration number" id="regNo" required="" />
+                <input class="text email" type="email" name="email" id="email" placeholder="Email" required="" />
+                <input class="text email" type="text" name="firstName" id="firstName" placeholder="First Name" required="" minlength="3"/>
+                <input class="text email" type="text" name="lastName" id="lastName" placeholder="Last Name" required="" minlength="3"/>
+                <input class="text email" type="file" name="image" id="image" placeholder="Select a passport" required="required" style="margin-bottom: 0px !important;"/>
+                <label for="image" style="color: #FFFFFF;">Select a passport</label>
+                <select name="sClass" id="sClass" class="form-control" style="width: 94.5% !important; margin-top: 20px; margin-bottom: 20px">
+                    <option value="JSS1">Junior secondary school 1</option>
+                    <option value="JSS2">Junior secondary school 2</option>
+                    <option value="JSS3">Junior secondary school 3</option>
+                    <option value="SS1_ART">Senior secondary school 1 Art</option>
+                    <option value="SS1_COMM">Senior secondary school 1 Commercial</option>
+                    <option value="SS1_SCI">Senior secondary school 1 Science</option>
+                    <option value="SS2_ART">Senior secondary school 2 Art</option>
+                    <option value="SS2_COMM">Senior secondary school 2 Commercial</option>
+                    <option value="SS2_SCI">Senior secondary school 2 Science</option>
+                    <option value="SS3_ART">Senior secondary school 3 Art</option>
+                    <option value="SS3_COMM">Senior secondary school 3 Commercial</option>
+                    <option value="SS3_SCI">Senior secondary school 3 Science</option>
+                </select>
+                <input type="button" class="btn btn-primary btn-md col-md-12" value="SIGNUP" style="margin-top: 20px" onclick="signup(this.form)" id="signupid"/>
+            </form>
+            <p>Don't have an Account? <a href="/login"> Login Now!</a></p>
+        </div>
+    </div>
+    <!-- copyright -->
+    <div class="colorlibcopy-agile">
+        <p>© Sms. All rights reserved</p>
+    </div>
+    <!-- //copyright -->
+    <ul class="colorlib-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<!-- //main -->
+</body>
+</html>
